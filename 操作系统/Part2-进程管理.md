@@ -133,5 +133,31 @@
 >> - wait(s): while s ≤0 do no_op;
 >> - s := s-1;
 >> signal(s): s := s+1;
-8. **记录型信号量机制**
+9. **记录型信号量机制**
+> 1. 信号量类型说明
+>> ```
+>> type semaphore = record
+>>     value: integer;
+>>     L: list of process;
+>> end
+>> ```
+> 2. wait(s)操作描述
+>> ```
+>> procedure wait(s)
+>> Var s: semaphore;
+>> begin
+>>     s.value := s.value - 1;
+>>     if s.value < 0 then block(s.L);
+>> end
+>> ```
+> 3. signal(s)操作描述
+>> ```
+>> procedure signal(s)
+>> Var s: semaphore
+>> begin
+>>     s.value := s.value + 1;
+>>     if s.value ≤ 0 then wakeup(s.L);
+>> end
+>> ```
+10. **AND型信号量集机制**
 > 1. 
