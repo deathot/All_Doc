@@ -1,3 +1,5 @@
+# Part2-进程管理
+---
 ### 2-1. 进程基本概念
 1. **进程执行分析及前趋图**
 > 1. 前趋图概念及举例说明
@@ -167,7 +169,7 @@
 >> <center><img src="/操作系统/All_pic/Screenshot  2024-09-25 at 8.01 AM.png" width = 50%></img></center>
 > 3. Ssignal(s1, s2, sn)操作
 >> <center><img src="/操作系统/All_pic/Screenshot  2024-09-25 at 8.03 AM.png" width = 50%></img></center>
-1.   **一般信号量集机制**
+11.   **一般信号量集机制**
 > 1. 引入
 >> - 记录型信号量/AND型信号量机制, waits/signal一次只能操作1, 效率低下
 >> - 且当资源数量低于某一下限.所以需要测试
@@ -184,7 +186,7 @@
 >> - Swait(s, 1, 0)
 >>> 1. 特殊且有用的信号量, 相当于可控开关
 >>> 2. 当s >= 1时, 允许多个进程进入特定区; 当s变为0, 将阻止任何进程进入特定区
-1.  **基于信号量机制解决进程并发问题的应用基础**
+12.  **基于信号量机制解决进程并发问题的应用基础**
 > 1. 利用信号量实现互斥-主程序
 >> ```
 >> Var mutex: semaphore := 1;
@@ -294,7 +296,7 @@
 >>      until false;
 >>  end
 >> ```
-1. **生产者-消费者问题初步解决方案的反思**
+2. **生产者-消费者问题初步解决方案的反思**
 > 1. 相邻wait(signal)操作颠倒分析
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 3.35.50 PM.png" width = 50%></img></center>
 > 2. 关于signal操作缺失的分析
@@ -303,14 +305,14 @@
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 3.39.08 PM.png" width = 50%></img></center>
 > 4. 同步问题程序设计要领
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 3.43.19 PM.png" width = 50%></img></center>
-1. **生产者-消费者问题方案的改进**
+3. **生产者-消费者问题方案的改进**
 > 1. 生产者-消费者主程序设计
 >> >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 3.56.37 PM.png" width = 50%></img></center>
 > 2. 生产者子程序设计
 >> >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 4.17.01 PM.png" width = 50%></img></center>
 > 3. 消费者子程序设计
 >> >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 4.19.16 PM.png" width = 50%></img></center>
-1. **基于单缓冲的单生产者-单消费者问题及解决方案**
+4. **基于单缓冲的单生产者-单消费者问题及解决方案**
 > 1. 两者的同步问题
 >> >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 4.41.53 PM.png" width = 50%></img></center>
 > 2. 主程序设计
@@ -319,7 +321,7 @@
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 4.44.01 PM.png" width = 50%></img></center>
 > 4. 计算任务子程序设计
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 4.44.44 PM.png" width = 50%></img></center>
-1. **哲学家进餐问题及解决方案**
+5. **哲学家进餐问题及解决方案**
 > 1. 问题描述
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 4.53.57 PM.png" width = 50%></img></center>
 > 2. 问题解析
@@ -342,7 +344,7 @@
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 5.08.01 PM.png" width = 50%></img></center>
 > 10. 进餐主程序设计-3-进餐限数[记录型型信号量]
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 5.08.52 PM.png" width = 50%></img></center>
-1. **读者-写者问题及解决方案**
+6. **读者-写者问题及解决方案**
 > 1. 读者-写着问题描述
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 5.13.41 PM.png" width = 50%></img></center>
 > 2. 程序信号量及变量设计
@@ -353,13 +355,13 @@
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 5.17.32 PM.png" width = 50%></img></center>
 > 5. 读者子程序设计
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 5.19.35 PM.png" width = 50%></img></center>
-1. **读写程序解决方案反思**
+7. **读写程序解决方案反思**
 > pass
-1. **公平型读者-写者问题解决方案**
+8. **公平型读者-写者问题解决方案**
 > pass
-1. **写者优先的-读写方案**
+9. **写者优先的-读写方案**
 > pass
-1.  **读者数限定-读写方案**
+10.  **读者数限定-读写方案**
 > pass
 ---
 ### 2-5. 管程
@@ -375,7 +377,7 @@
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 5.30.53 PM.png" width = 50%></img></center>
 > 5. 管程的进程同步互斥保证
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 5.31.50 PM.png" width = 50%></img></center>
-1. **Hoare管程实现方案**
+2. **Hoare管程实现方案**
 > 1. 实现方案
 >> - TYPE interface = RECORD
 >> - 管理定义及成员组成
@@ -384,15 +386,15 @@
 >>> Pass
 >> - signal操作函数
 >>> Pass
-1. **基于Hoare管程的哲学家进餐问题**
+3. **基于Hoare管程的哲学家进餐问题**
 > 1. 程序设计
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 8.47.17 PM.png" width = 50%></img></center>
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 8.48.30 PM.png" width = 50%></img></center>
 >> - 再分别写Test, PickUp, PutDown函数
-1. **Hanson管程实现方案**
+4. **Hanson管程实现方案**
 > 1. 实现方案
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 8.52.48 PM.png" width = 50%></img></center>
-1. **基于Hanson管程的生-消问题解决方案**
+5. **基于Hanson管程的生-消问题解决方案**
 > 1. Hanson管程应用
 >> - 基于Hanson管程的进程同步问题解决方案
 >>> 1. entry类型过程隐含以check()开始, 以release()结束
@@ -420,7 +422,7 @@
 >> - 共享存储器系统
 >> - 消息传递系统
 >> - 管道通信系统
-1. **消息传递通信实现方式**
+2. **消息传递通信实现方式**
 > 1. 直接通信方式
 >> - 通信原语: Send, Receive
 >> - 一个接收进程可与多个发送进程通信
@@ -435,7 +437,7 @@
 >> - 通信链路
 >> - 消息格式
 >> - 进程同步方式   
-1. **消息缓冲队列通信机制**
+3. **消息缓冲队列通信机制**
 > 1. 通信机制-数据结构
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 9.10.11 PM.png" width = 50%></img></center>
 > 2. 发送原语
@@ -451,7 +453,7 @@
 >> - 对策
 > 2. 线程的特征
 >> - 轻型实体及共享进程资源/独立调度和分派/创建、撤销、切换等系统开销/地址空间共享及通信效率/系统并发执行程度提高
-1. **线程的控制、同步与通信**
+2. **线程的控制、同步与通信**
 > 1. 线程的控制
 >> - 基本属性: 线程标识符、寄存器状态、堆栈及专有存储器/线程状态、优先级与信号屏蔽
 >> - 线程的创建和终止
@@ -461,7 +463,7 @@
 >> - 条件变量与互斥锁
 > 3. 基于互斥锁和条件变量的线程同步
 >> <center><img src="/操作系统/All_pic/Screenshot 2024-09-26 at 9.17.58 PM.png" width = 50%></img></center>
-1. **线程实现方式**
+3. **线程实现方式**
 > 1. 方式
 >> - 内核支持线程
 >> - 用户级线程
