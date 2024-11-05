@@ -9,7 +9,7 @@
 >> - **二进制->十进制 != 十进制的BCD码**
 2. **计算机中的信息表示**
 > 1. 字符的编码--ASCII码
->> - <center><img src="/微机原理/All_pic/Screenshot 2024-09-18 at 2.24.55 PM.png" width></img></center>
+>> - <center><img src="All_pic/Screenshot 2024-09-18 at 2.24.55 PM.png" width></img></center>
 >> - 键入"1", 实际写入键盘存储区的是31H, 即00110001B
 >> - 欲显示"0", 应把30H既00110000B -> 显示存储区
 > 2. 十进制数的二进制编码--BCD码
@@ -59,7 +59,7 @@ X =-75, 则[X]补=10110101
 >> - 存储体
 >> - 单元地址
 >> - 存储器
->> <center><img src="/微机原理/All_pic/Screenshot 2024-09-18 at 8.27.07 PM.png" width=80%></img></center>
+>> <center><img src="All_pic/Screenshot 2024-09-18 at 8.27.07 PM.png" width=80%></img></center>
 > 2. 强调
 >> - **位**(bit)是计算机表示的最小基本的数据单位, 指的是只能为0/1的二进制位.做单位时记作b.
 >> - **字节**(byte)由8个二进制位组成.做单位记作B
