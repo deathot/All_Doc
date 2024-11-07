@@ -109,10 +109,10 @@
             - 间址寄存器与约定访问的逻辑段
             <center><img src="/All_pic/Screenshot 2024-11-05 at 20.38.41.png" width=50%></img></center>
 
-        3. 例题: 设数据段BUF字节单元的内容为55H, 取出该数 -> AL
+        <!-- 3. 例题: 设数据段BUF字节单元的内容为55H, 取出该数 -> AL
             - 解法一: BX间址
             - 解法二: BP间址
-            - 解法三: 变量名直接寻址
+            - 解法三: 变量名直接寻址 -->
         3. 基址寻址
             - 偏移地址由两部分组成. 一部分在基址寄存器中, 另一部分为常量
             - (1)表达式: 物理地址 = 段寄存器内容 * 16 + 基址寄存器 + 位移量
@@ -134,4 +134,9 @@
             <center><img src="/All_pic/Screenshot 2024-11-05 at 21.03.22.png" width=50%></img></center>
             <center><img src="/All_pic/Screenshot 2024-11-05 at 21.03.49.png" width=50%></img></center>
             <center><img src="/All_pic/Screenshot 2024-11-05 at 21.08.12.png" width=50%></img></center>
+
+    - I/O端口寻址:
+        1. Pass
+
+    
             
