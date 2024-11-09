@@ -47,3 +47,32 @@
 ```
 Quantum Algorithms for Traffic Flow Optimization and Simulation
 ```
+
+```
+void led_on(void) {
+    int i, nOut;
+    rGPFDAT = nOut & 0x70;
+    for(i = 0; i < 100000; i++);
+    rGPFDAT = nOut & 0x30;
+    for(i = 0; i < 100000; i++);
+    rGPFDAT = nOut & 0x10;
+    for(i = 0; i < 100000; i++);
+    rGPFDAT = nOut & 0x00;
+    for(i = 0; i < 100000; i++);
+}
+void led_off(void)
+
+int i;
+int nOut = 0;
+rGPFDAT = 0;
+for(i = 0; i < 100000; i++);
+rGPFDAT = nOut | 0x80;
+for(i = 0; i < 100000; i++);
+rGPFDAT = nOut | 0x40;
+for(i = 0; i < 100000; i++);
+rGPFDAT = nOut | 0x20;
+for(i = 0; i < 100000; i++);
+rGPFDAT = nOut | 0x10;
+for(i = 0; i < 100000; i++);
+void led_on_off(void)
+```
