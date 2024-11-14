@@ -415,7 +415,7 @@ Var Map: array[m] of integer; array[m][n] of bit
     - 适用于各类程序, 性能较好, 但需要硬件支持
 3. 举例
     - 从当前往前看, 选一个最近最久未使用的淘汰
-    <center><img src="/操作系统/All_pic/Screenshot 2024-10-13 at 11.07.30.png"width=50%></img></center>
+    <center><img src="/All_pic/Screenshot 2024-10-13 at 11.07.30.png" width=50%></img></center>
 4. 移位寄存器
     - 为每一个物理块设置一个移位寄存器, 未被访问就置0, 访问了置0, 再淘汰时选0最多的那一个块淘汰
 5. 栈
